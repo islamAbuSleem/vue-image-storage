@@ -1,7 +1,7 @@
 # image-storage
 
 ## Project setup
-``
+```
 npm install
 ```
 
