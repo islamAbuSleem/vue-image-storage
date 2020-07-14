@@ -1,8 +1,9 @@
 import api from '../../api/imgur';
 import qs from 'qs';
+import router from '../../router';
 
 const state = {
-    token: null,
+    token: window.localStorage.getItem("login_token"),
 };
 
 const getters = {
@@ -15,10 +16,13 @@ const actions = {
     },
     finalizeLogin({commit}, hash){
         const query = qs.parse(hash.replace("#", ""));
-        commit("setToken", query.access_token)
+        commit("setToken", query.access_token);
+        window.localStorage.setItem("login_token",query.access_token);
+        router.push("/");
     },
     logout: ({commit}) => {
         commit('setToken', null);
+        window.localStorage.removeItem("login_token");
     }
 };
 
