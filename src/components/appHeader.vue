@@ -5,8 +5,8 @@
                 <router-link :to="{name:'Home'}" class="item">Image Storage</router-link> 
                 <div class="right menu">
                     <template v-if="isLoggedIn">
-                        <router-link :to="{name:'gallery'}" class="item">Gallery</router-link> 
-                        <router-link :to="{name:'upload'}" class="item">Upload</router-link> 
+                        <router-link :to="{name:'imageList'}" class="item">Gallery</router-link> 
+                        <router-link :to="{name:'uploadForm'}" class="item">Upload</router-link> 
                         <a class="item" @click="logout">Logout</a> 
                     </template>
                     <a  class="ui item" @click="login" v-else>
