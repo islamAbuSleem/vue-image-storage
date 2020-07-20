@@ -22,7 +22,7 @@
 import { mapActions, mapGetters } from 'vuex';
 
 export default {
-    name:"header",
+    name:"appHeader",
     computed: {
         ...mapGetters(['isLoggedIn'])
     },

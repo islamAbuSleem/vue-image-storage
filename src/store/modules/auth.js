@@ -23,6 +23,7 @@ const actions = {
     logout: ({commit}) => {
         commit('setToken', null);
         window.localStorage.removeItem("login_token");
+        router.push("/");
     }
 };
 
