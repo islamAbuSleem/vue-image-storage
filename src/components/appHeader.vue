@@ -2,7 +2,7 @@
     <div class="ui container header`">
         <div id="nav">
             <div class="ui pointing menu">
-                <router-link :to="{name:'Home'}" class="item">Image Storage</router-link> 
+                <router-link :to="{name:'imageList'}" class="item">Image Storage</router-link> 
                 <div class="right menu">
                     <template v-if="isLoggedIn">
                         <router-link :to="{name:'imageList'}" class="item">Gallery</router-link> 

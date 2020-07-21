@@ -1,7 +1,7 @@
 <template>
   <div class="upload ui container">
     <div class="dropper">
-      <input type="file" @change="uploadImages">
+      <input type="file" @change="uploadImages($event.target.files)" multiple accept="image/*">
       <span>Drag Image to Upload</span>
     </div>
   </div>
